@@ -11,10 +11,10 @@ public class MontaICMSCst40 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
     @Override
     public void build(TNFe.InfNFe.Det.Imposto.ICMS imposto, ICMS icms) {
         if (icms.getCST().equals(CSTIcms.CST_41)
-                && ((icms.getvBCSTRet().compareTo(BigDecimal.ZERO)) != 0)
-                    || (icms.getvICMSSTRet().compareTo(BigDecimal.ZERO) != 0)
-                    || (icms.getvBCSTDest().compareTo(BigDecimal.ZERO) != 0)
-                    || (icms.getvICMSSTDest().compareTo(BigDecimal.ZERO) != 0)) {
+                && ((icms.getvBCSTRet() != null && icms.getvBCSTRet().compareTo(BigDecimal.ZERO) != 0))
+                    || (icms.getvICMSSTRet() != null && (icms.getvICMSSTRet().compareTo(BigDecimal.ZERO) != 0))
+                    || (icms.getvBCSTDest() != null && (icms.getvBCSTDest().compareTo(BigDecimal.ZERO) != 0))
+                    || (icms.getvICMSSTDest() != null && (icms.getvICMSSTDest().compareTo(BigDecimal.ZERO) != 0))) {
             buildIcmsPartilha(imposto, icms);
         } else {
             buildIcms(imposto, icms);
