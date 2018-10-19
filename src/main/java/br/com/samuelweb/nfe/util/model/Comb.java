@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -74,22 +75,22 @@ public class Comb {
         }
         comb.setDescANP(this.getDescANP());
         if (this.getPglp() != null) {
-            comb.setPGLP(this.getPglp().toString());
+            comb.setPGLP(BigDecimalUtil.format(this.getPglp()));
         }
         if (this.getPgNn() != null) {
-            comb.setPGNn(this.getPgNn().toString());
+            comb.setPGNn(BigDecimalUtil.format(this.getPgNn()));
         }
         if (this.getPgNi() != null) {
-            comb.setPGNi(this.getPgNi().toString());
+            comb.setPGNi(BigDecimalUtil.format(this.getPgNi()));
         }
         if (this.getvPart() != null) {
-            comb.setVPart(this.getvPart().toString());
+            comb.setVPart(BigDecimalUtil.format(this.getvPart()));
         }
         if (this.getCodif() != null) {
             comb.setCODIF(this.getCodif().toString());
         }
         if (this.getqTemp() != null) {
-            comb.setQTemp(this.getqTemp().toString());
+            comb.setQTemp(BigDecimalUtil.format(this.getqTemp()));
         }
         comb.setUFCons(TUf.fromValue(this.getUfCons()));
         if (this.getCide() != null) {

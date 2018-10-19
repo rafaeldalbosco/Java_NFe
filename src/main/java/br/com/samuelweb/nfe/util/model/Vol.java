@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjetoList;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -56,10 +57,10 @@ public class Vol {
         vol.setMarca(this.getMarca());
         vol.setNVol(this.getnVol());
         if (this.getPesoL() != null) {
-            vol.setPesoL(this.getPesoL().toString());
+            vol.setPesoL(BigDecimalUtil.format(this.getPesoL()));
         }
         if (this.getPesoB() != null) {
-            vol.setPesoB(this.getPesoB().toString());
+            vol.setPesoB(BigDecimalUtil.format(this.getPesoB()));
         }
         if (this.getLacres() != null) {
             getLacres().forEach(e -> vol.getLacres().add(e.build()));

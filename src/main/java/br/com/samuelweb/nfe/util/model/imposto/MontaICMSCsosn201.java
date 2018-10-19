@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.ICMS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -18,34 +19,34 @@ public class MontaICMSCsosn201 implements MontaImposto<TNFe.InfNFe.Det.Imposto.I
             icmsSn201.setModBCST(icms.getModBCST().getValue().toString());
         }
         if (icms.getpMVAST() != null) {
-            icmsSn201.setPMVAST(icms.getpMVAST().toString());
+            icmsSn201.setPMVAST(BigDecimalUtil.format(icms.getpMVAST()));
         }
         if (icms.getpRedBCST() != null) {
-            icmsSn201.setPRedBCST(icms.getpRedBCST().toString());
+            icmsSn201.setPRedBCST(BigDecimalUtil.format(icms.getpRedBCST()));
         }
         if (icms.getvBCST() != null) {
-            icmsSn201.setVBCST(icms.getvBCST().toString());
+            icmsSn201.setVBCST(BigDecimalUtil.format(icms.getvBCST()));
         }
         if (icms.getpICMSST() != null) {
-            icmsSn201.setPICMSST(icms.getpICMSST().toString());
+            icmsSn201.setPICMSST(BigDecimalUtil.format(icms.getpICMSST()));
         }
         if (icms.getvICMSST() != null) {
-            icmsSn201.setVICMSST(icms.getvICMSST().toString());
+            icmsSn201.setVICMSST(BigDecimalUtil.format(icms.getvICMSST()));
         }
         if (icms.getvBCFCPST() != null) {
-            icmsSn201.setVBCFCPST(icms.getvBCFCPST().toString());
+            icmsSn201.setVBCFCPST(BigDecimalUtil.format(icms.getvBCFCPST()));
         }
         if (icms.getpFCPST() != null) {
-            icmsSn201.setPFCPST(icms.getpFCPST().toString());
+            icmsSn201.setPFCPST(BigDecimalUtil.format(icms.getpFCPST()));
         }
         if (icms.getvFCPST() != null) {
-            icmsSn201.setVFCPST(icms.getvFCPST().toString());
+            icmsSn201.setVFCPST(BigDecimalUtil.format(icms.getvFCPST()));
         }
         if (icms.getpCredSN() != null) {
-            icmsSn201.setPCredSN(icms.getpCredSN().toString());
+            icmsSn201.setPCredSN(BigDecimalUtil.format(icms.getpCredSN()));
         }
         if (icms.getvCredICMSSN() != null) {
-            icmsSn201.setVCredICMSSN(icms.getvCredICMSSN().toString());
+            icmsSn201.setVCredICMSSN(BigDecimalUtil.format(icms.getvCredICMSSN()));
         }
         imposto.setICMSSN201(icmsSn201);
     }

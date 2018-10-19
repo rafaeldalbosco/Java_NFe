@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjetoList;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -25,7 +26,7 @@ public class Pag {
         TNFe.InfNFe.Pag pag = new TNFe.InfNFe.Pag();
         getDetPag().forEach(detPag -> pag.getDetPag().add(detPag.build()));
         if (this.getvTroco()!= null){
-            pag.setVTroco(this.getvTroco().toString());
+            pag.setVTroco(BigDecimalUtil.format(this.getvTroco()));
         }
         return pag;
     }

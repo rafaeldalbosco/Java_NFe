@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjeto;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -38,7 +39,7 @@ public class DetPag {
 
         detPag.setTPag(gettPag().getValue());
         if (this.getvPag() != null){
-            detPag.setVPag(this.getvPag().toString());
+            detPag.setVPag(BigDecimalUtil.format(this.getvPag()));
         }
         if (this.getCard() != null) {
             detPag.setCard(this.getCard().build());

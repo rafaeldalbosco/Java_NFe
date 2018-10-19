@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.ICMS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -26,22 +27,22 @@ public class MontaICMSCst60 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
             icms60.setCST(icms.getCST().getValue());
         }
         if (icms.getvBCSTRet() != null) {
-            icms60.setVBCSTRet(icms.getvBCSTRet().toString());
+            icms60.setVBCSTRet(BigDecimalUtil.format(icms.getvBCSTRet()));
         }
         if (icms.getpST() != null) {
-            icms60.setPST(icms.getpST().toString());
+            icms60.setPST(BigDecimalUtil.format(icms.getpST()));
         }
         if (icms.getvICMSSTRet() != null) {
-            icms60.setVICMSSTRet(icms.getvICMSSTRet().toString());
+            icms60.setVICMSSTRet(BigDecimalUtil.format(icms.getvICMSSTRet()));
         }
         if (icms.getvBCFCPSTRet() != null) {
-            icms60.setVBCFCPSTRet(icms.getvBCFCPSTRet().toString());
+            icms60.setVBCFCPSTRet(BigDecimalUtil.format(icms.getvBCFCPSTRet()));
         }
         if (icms.getpFCPSTRet() != null) {
-            icms60.setPFCPSTRet(icms.getpFCPSTRet().toString());
+            icms60.setPFCPSTRet(BigDecimalUtil.format(icms.getpFCPSTRet()));
         }
         if (icms.getvFCPSTRet() != null) {
-            icms60.setVFCPSTRet(icms.getvFCPSTRet().toString());
+            icms60.setVFCPSTRet(BigDecimalUtil.format(icms.getvFCPSTRet()));
         }
         imposto.setICMS60(icms60);
     }

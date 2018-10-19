@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -55,25 +56,25 @@ public class PISST {
         if (this.getvBc() != null && this.getpPis() != null
                 && this.getvBc().add(this.getpPis()).compareTo(BigDecimal.ZERO) > 0) {
             if (this.getvBc() != null) {
-                pisst.setVBC(this.getvBc().toString());
+                pisst.setVBC(BigDecimalUtil.format(this.getvBc()));
             }
             if (this.getpPis() != null) {
-                pisst.setPPIS(this.getpPis().toString());
+                pisst.setPPIS(BigDecimalUtil.format(this.getpPis()));
             }
             if (this.getvPIS() != null) {
-                pisst.setVPIS(this.getvPIS().toString());
+                pisst.setVPIS(BigDecimalUtil.format(this.getvPIS()));
             }
         }
         if (this.getqBCProd() != null && this.getvAliqProd() != null
                 && this.getqBCProd().add(this.getvAliqProd()).compareTo(BigDecimal.ZERO) > 0) {
             if (this.getqBCProd() != null) {
-                pisst.setQBCProd(this.getqBCProd().toString());
+                pisst.setQBCProd(BigDecimalUtil.format(this.getqBCProd()));
             }
             if (this.getvAliqProd() != null) {
-                pisst.setVAliqProd(this.getvAliqProd().toString());
+                pisst.setVAliqProd(BigDecimalUtil.format(this.getvAliqProd()));
             }
             if (this.getvPIS() != null) {
-                pisst.setVPIS(this.getvPIS().toString());
+                pisst.setVPIS(BigDecimalUtil.format(this.getvPIS()));
             }
         }
         return pisst;

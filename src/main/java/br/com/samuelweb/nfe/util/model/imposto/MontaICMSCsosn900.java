@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.ICMS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -18,49 +19,49 @@ public class MontaICMSCsosn900 implements MontaImposto<TNFe.InfNFe.Det.Imposto.I
             icmsSn900.setModBC(icms.getModBC().getValue().toString());
         }
         if (icms.getvBC() != null) {
-            icmsSn900.setVBC(icms.getvBC().toString());
+            icmsSn900.setVBC(BigDecimalUtil.format(icms.getvBC()));
         }
         if (icms.getpRedBC() != null) {
-            icmsSn900.setPRedBC(icms.getpRedBC().toString());
+            icmsSn900.setPRedBC(BigDecimalUtil.format(icms.getpRedBC()));
         }
         if (icms.getpICMS() != null) {
-            icmsSn900.setPICMS(icms.getpICMS().toString());
+            icmsSn900.setPICMS(BigDecimalUtil.format(icms.getpICMS()));
         }
         if (icms.getvICMS() != null) {
-            icmsSn900.setVICMS(icms.getvICMS().toString());
+            icmsSn900.setVICMS(BigDecimalUtil.format(icms.getvICMS()));
         }
         if (icms.getModBCST() != null) {
             icmsSn900.setModBCST(icms.getModBCST().getValue().toString());
         }
         if (icms.getpMVAST() != null) {
-            icmsSn900.setPMVAST(icms.getpMVAST().toString());
+            icmsSn900.setPMVAST(BigDecimalUtil.format(icms.getpMVAST()));
         }
         if (icms.getpRedBCST() != null) {
-            icmsSn900.setPRedBCST(icms.getpRedBCST().toString());
+            icmsSn900.setPRedBCST(BigDecimalUtil.format(icms.getpRedBCST()));
         }
         if (icms.getvBCST() != null) {
-            icmsSn900.setVBCST(icms.getvBCST().toString());
+            icmsSn900.setVBCST(BigDecimalUtil.format(icms.getvBCST()));
         }
         if (icms.getpICMSST() != null) {
-            icmsSn900.setPICMSST(icms.getpICMSST().toString());
+            icmsSn900.setPICMSST(BigDecimalUtil.format(icms.getpICMSST()));
         }
         if (icms.getvICMSST() != null) {
-            icmsSn900.setVICMSST(icms.getvICMSST().toString());
+            icmsSn900.setVICMSST(BigDecimalUtil.format(icms.getvICMSST()));
         }
         if (icms.getvBCFCPST() != null) {
-            icmsSn900.setVBCFCPST(icms.getvBCFCPST().toString());
+            icmsSn900.setVBCFCPST(BigDecimalUtil.format(icms.getvBCFCPST()));
         }
         if (icms.getpFCPST() != null) {
-            icmsSn900.setPFCPST(icms.getpFCPST().toString());
+            icmsSn900.setPFCPST(BigDecimalUtil.format(icms.getpFCPST()));
         }
         if (icms.getvFCPST() != null) {
-            icmsSn900.setVFCPST(icms.getvFCPST().toString());
+            icmsSn900.setVFCPST(BigDecimalUtil.format(icms.getvFCPST()));
         }
         if (icms.getpCredSN() != null) {
-            icmsSn900.setPCredSN(icms.getpCredSN().toString());
+            icmsSn900.setPCredSN(BigDecimalUtil.format(icms.getpCredSN()));
         }
         if (icms.getvCredICMSSN() != null) {
-            icmsSn900.setVCredICMSSN(icms.getvCredICMSSN().toString());
+            icmsSn900.setVCredICMSSN(BigDecimalUtil.format(icms.getvCredICMSSN()));
         }
         imposto.setICMSSN900(icmsSn900);
     }

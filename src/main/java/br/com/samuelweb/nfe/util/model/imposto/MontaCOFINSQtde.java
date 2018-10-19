@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.COFINS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -11,13 +12,13 @@ public class MontaCOFINSQtde implements MontaImposto<TNFe.InfNFe.Det.Imposto.COF
             cofinsQtde.setCST(cofins.getCst().getValue());
         }
         if (cofins.getqBCProd() != null) {
-            cofinsQtde.setQBCProd(cofins.getqBCProd().toString());
+            cofinsQtde.setQBCProd(BigDecimalUtil.format(cofins.getqBCProd()));
         }
         if (cofins.getvAliqProd() != null) {
-            cofinsQtde.setVAliqProd(cofins.getvAliqProd().toString());
+            cofinsQtde.setVAliqProd(BigDecimalUtil.format(cofins.getvAliqProd()));
         }
         if (cofins.getvCOFINS() != null) {
-            cofinsQtde.setVCOFINS(cofins.getvCOFINS().toString());
+            cofinsQtde.setVCOFINS(BigDecimalUtil.format(cofins.getvCOFINS()));
         }
         imposto.setCOFINSQtde(cofinsQtde);
     }

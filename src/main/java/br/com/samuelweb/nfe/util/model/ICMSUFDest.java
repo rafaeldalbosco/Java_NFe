@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -65,31 +66,31 @@ public class ICMSUFDest {
     public TNFe.InfNFe.Det.Imposto.ICMSUFDest build() {
         TNFe.InfNFe.Det.Imposto.ICMSUFDest icmsufDest = new TNFe.InfNFe.Det.Imposto.ICMSUFDest();
         if (this.getvBCUFDest() != null) {
-            icmsufDest.setVBCUFDest(this.getvBCUFDest().toString());
+            icmsufDest.setVBCUFDest(BigDecimalUtil.format(this.getvBCUFDest()));
         }
         if (this.getvBCFCPUFDest() != null) {
-            icmsufDest.setVBCFCPUFDest(this.getvBCFCPUFDest().toString());
+            icmsufDest.setVBCFCPUFDest(BigDecimalUtil.format(this.getvBCFCPUFDest()));
         }
         if (this.getpFCPUFDest() != null) {
-            icmsufDest.setPFCPUFDest(this.getpFCPUFDest().toString());
+            icmsufDest.setPFCPUFDest(BigDecimalUtil.format(this.getpFCPUFDest()));
         }
         if (this.getpICMSUFDest() != null) {
-            icmsufDest.setPICMSUFDest(this.getpICMSUFDest().toString());
+            icmsufDest.setPICMSUFDest(BigDecimalUtil.format(this.getpICMSUFDest()));
         }
         if (this.getpICMSInter() != null) {
-            icmsufDest.setPICMSInter(this.getpICMSInter().toString());
+            icmsufDest.setPICMSInter(BigDecimalUtil.format(this.getpICMSInter()));
         }
         if (this.getpICMSInterPart() != null) {
-            icmsufDest.setPICMSInterPart(this.getpICMSInterPart().toString());
+            icmsufDest.setPICMSInterPart(BigDecimalUtil.format(this.getpICMSInterPart()));
         }
         if (this.getvFCPUFDest() != null) {
-            icmsufDest.setVFCPUFDest(this.getvFCPUFDest().toString());
+            icmsufDest.setVFCPUFDest(BigDecimalUtil.format(this.getvFCPUFDest()));
         }
         if (this.getvICMSUFDest() != null) {
-            icmsufDest.setVICMSUFDest(this.getvICMSUFDest().toString());
+            icmsufDest.setVICMSUFDest(BigDecimalUtil.format(this.getvICMSUFDest()));
         }
         if (this.getvICMSUFRemet() != null) {
-            icmsufDest.setVICMSUFRemet(this.getvICMSUFRemet().toString());
+            icmsufDest.setVICMSUFRemet(BigDecimalUtil.format(this.getvICMSUFRemet()));
         }
         return icmsufDest;
     }

@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.PIS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -15,21 +16,21 @@ public class MontaPISOutr implements MontaImposto<TNFe.InfNFe.Det.Imposto.PIS, P
         if (pis.getqBCProd() != null && pis.getvAliqProd() != null
                 && pis.getqBCProd().add(pis.getvAliqProd()).compareTo(BigDecimal.ZERO) > 0) {
             if (pis.getqBCProd() != null) {
-                pisOutr.setQBCProd(pis.getqBCProd().toString());
+                pisOutr.setQBCProd(BigDecimalUtil.format(pis.getqBCProd()));
             }
             if (pis.getvAliqProd() != null) {
-                pisOutr.setVAliqProd(pis.getvAliqProd().toString());
+                pisOutr.setVAliqProd(BigDecimalUtil.format(pis.getvAliqProd()));
             }
         } else {
             if (pis.getvBC() != null) {
-                pisOutr.setVBC(pis.getvBC().toString());
+                pisOutr.setVBC(BigDecimalUtil.format(pis.getvBC()));
             }
             if (pis.getpPIS() != null) {
-                pisOutr.setPPIS(pis.getpPIS().toString());
+                pisOutr.setPPIS(BigDecimalUtil.format(pis.getpPIS()));
             }
         }
         if (pis.getvPIS() != null) {
-            pisOutr.setVPIS(pis.getvPIS().toString());
+            pisOutr.setVPIS(BigDecimalUtil.format(pis.getvPIS()));
         }
         imposto.setPISOutr(pisOutr);
     }

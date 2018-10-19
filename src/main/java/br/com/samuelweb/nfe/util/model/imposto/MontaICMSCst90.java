@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.ICMS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TUf;
@@ -32,16 +33,16 @@ public class MontaICMSCst90 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
                 icms90.setModBC(icms.getModBC().getValue().toString());
             }
             if (icms.getvBC() != null) {
-                icms90.setVBC(icms.getvBC().toString());
+                icms90.setVBC(BigDecimalUtil.format(icms.getvBC()));
             }
             if (icms.getpRedBC() != null) {
-                icms90.setPRedBC(icms.getpRedBC().toString());
+                icms90.setPRedBC(BigDecimalUtil.format(icms.getpRedBC()));
             }
             if (icms.getpICMS() != null) {
-                icms90.setPICMS(icms.getpICMS().toString());
+                icms90.setPICMS(BigDecimalUtil.format(icms.getpICMS()));
             }
             if (icms.getvICMS() != null) {
-                icms90.setVICMS(icms.getvICMS().toString());
+                icms90.setVICMS(BigDecimalUtil.format(icms.getvICMS()));
             }
         }
 
@@ -51,41 +52,41 @@ public class MontaICMSCst90 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
                 icms90.setModBCST(icms.getModBCST().toString());
             }
             if (icms.getpMVAST() != null) {
-                icms90.setPMVAST(icms.getpMVAST().toString());
+                icms90.setPMVAST(BigDecimalUtil.format(icms.getpMVAST()));
             }
             if (icms.getpRedBCST() != null) {
-                icms90.setPRedBCST(icms.getpRedBCST().toString());
+                icms90.setPRedBCST(BigDecimalUtil.format(icms.getpRedBCST()));
             }
             if (icms.getvBCST() != null) {
-                icms90.setVBCST(icms.getvBCST().toString());
+                icms90.setVBCST(BigDecimalUtil.format(icms.getvBCST()));
             }
             if (icms.getpICMSST() != null) {
-                icms90.setPICMSST(icms.getpICMSST().toString());
+                icms90.setPICMSST(BigDecimalUtil.format(icms.getpICMSST()));
             }
             if (icms.getvICMSST() != null) {
-                icms90.setVICMSST(icms.getvICMSST().toString());
+                icms90.setVICMSST(BigDecimalUtil.format(icms.getvICMSST()));
             }
         }
         if (icms.getvBCFCP() != null) {
-            icms90.setVBCFCP(icms.getvBCFCP().toString());
+            icms90.setVBCFCP(BigDecimalUtil.format(icms.getvBCFCP()));
         }
         if (icms.getpFCP() != null) {
-            icms90.setPFCP(icms.getpFCP().toString());
+            icms90.setPFCP(BigDecimalUtil.format(icms.getpFCP()));
         }
         if (icms.getvFCP() != null) {
-            icms90.setVFCP(icms.getvFCP().toString());
+            icms90.setVFCP(BigDecimalUtil.format(icms.getvFCP()));
         }
         if (icms.getvBCFCPST() != null) {
-            icms90.setVBCFCPST(icms.getvBCFCPST().toString());
+            icms90.setVBCFCPST(BigDecimalUtil.format(icms.getvBCFCPST()));
         }
         if (icms.getpFCPST() != null) {
-            icms90.setPFCPST(icms.getpFCPST().toString());
+            icms90.setPFCPST(BigDecimalUtil.format(icms.getpFCPST()));
         }
         if (icms.getvFCPST() != null) {
-            icms90.setVFCPST(icms.getvFCPST().toString());
+            icms90.setVFCPST(BigDecimalUtil.format(icms.getvFCPST()));
         }
         if (icms.getvICMSDeson() != null) {
-            icms90.setVICMSDeson(icms.getvICMSDeson().toString());
+            icms90.setVICMSDeson(BigDecimalUtil.format(icms.getvICMSDeson()));
         }
         if (icms.getMotDesICMS() != null) {
             icms90.setMotDesICMS(icms.getMotDesICMS().toString());
@@ -107,16 +108,16 @@ public class MontaICMSCst90 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
                 icmsPart.setModBC(icms.getModBC().getValue().toString());
             }
             if (icms.getvBC() != null) {
-                icmsPart.setVBC(icms.getvBC().toString());
+                icmsPart.setVBC(BigDecimalUtil.format(icms.getvBC()));
             }
             if (icms.getpRedBC() != null) {
-                icmsPart.setPRedBC(icms.getpRedBC().toString());
+                icmsPart.setPRedBC(BigDecimalUtil.format(icms.getpRedBC()));
             }
             if (icms.getpICMS() != null) {
-                icmsPart.setPICMS(icms.getpICMS().toString());
+                icmsPart.setPICMS(BigDecimalUtil.format(icms.getpICMS()));
             }
             if (icms.getvICMS() != null) {
-                icmsPart.setVICMS(icms.getvICMS().toString());
+                icmsPart.setVICMS(BigDecimalUtil.format(icms.getvICMS()));
             }
         }
         if (icms.getvBCST().compareTo(BigDecimal.ZERO) > 0
@@ -125,23 +126,23 @@ public class MontaICMSCst90 implements MontaImposto<TNFe.InfNFe.Det.Imposto.ICMS
                 icmsPart.setModBCST(icms.getModBCST().toString());
             }
             if (icms.getpMVAST() != null) {
-                icmsPart.setPMVAST(icms.getpMVAST().toString());
+                icmsPart.setPMVAST(BigDecimalUtil.format(icms.getpMVAST()));
             }
             if (icms.getpRedBCST() != null) {
-                icmsPart.setPRedBCST(icms.getpRedBCST().toString());
+                icmsPart.setPRedBCST(BigDecimalUtil.format(icms.getpRedBCST()));
             }
             if (icms.getvBCST() != null) {
-                icmsPart.setVBCST(icms.getvBCST().toString());
+                icmsPart.setVBCST(BigDecimalUtil.format(icms.getvBCST()));
             }
             if (icms.getpICMSST() != null) {
-                icmsPart.setPICMSST(icms.getpICMSST().toString());
+                icmsPart.setPICMSST(BigDecimalUtil.format(icms.getpICMSST()));
             }
             if (icms.getvICMSST() != null) {
-                icmsPart.setVICMSST(icms.getvICMSST().toString());
+                icmsPart.setVICMSST(BigDecimalUtil.format(icms.getvICMSST()));
             }
         }
         if (icms.getpBCOp() != null) {
-            icmsPart.setPBCOp(icms.getpBCOp().toString());
+            icmsPart.setPBCOp(BigDecimalUtil.format(icms.getpBCOp()));
         }
         if (icms.getUFST() != null) {
             icmsPart.setUFST(TUf.fromValue(icms.getUFST()));

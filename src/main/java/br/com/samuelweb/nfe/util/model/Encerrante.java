@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -50,10 +51,10 @@ public class Encerrante {
             encerrante.setNTanque(this.getnTanque().toString());
         }
         if (this.getvEncIni() != null) {
-            encerrante.setVEncIni(this.getvEncIni().toString());
+            encerrante.setVEncIni(BigDecimalUtil.format(this.getvEncIni()));
         }
         if (this.getvEncFin() != null) {
-            encerrante.setVEncFin(this.getvEncFin().toString());
+            encerrante.setVEncFin(BigDecimalUtil.format(this.getvEncFin()));
         }
         return encerrante;
     }

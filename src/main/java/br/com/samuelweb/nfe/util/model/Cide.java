@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -30,13 +31,13 @@ public class Cide {
     public TNFe.InfNFe.Det.Prod.Comb.CIDE build() {
         TNFe.InfNFe.Det.Prod.Comb.CIDE cide = new TNFe.InfNFe.Det.Prod.Comb.CIDE();
         if (this.getQbcProd() != null) {
-            cide.setQBCProd(this.getQbcProd().toString());
+            cide.setQBCProd(BigDecimalUtil.format(this.getQbcProd()));
         }
         if (this.getvAliqProd() != null) {
-            cide.setVAliqProd(this.getvAliqProd().toString());
+            cide.setVAliqProd(BigDecimalUtil.format(this.getvAliqProd()));
         }
         if (this.getVcide() != null) {
-            cide.setVCIDE(this.getVcide().toString());
+            cide.setVCIDE(BigDecimalUtil.format(this.getVcide()));
         }
         return cide;
     }

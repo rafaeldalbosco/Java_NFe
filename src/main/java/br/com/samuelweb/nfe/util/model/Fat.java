@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -41,15 +42,15 @@ public class Fat {
             fat.setNFat(this.getnFat());
 
             if (this.getvOrig() != null){
-                fat.setVOrig(this.getvOrig().toString());
+                fat.setVOrig(BigDecimalUtil.format(this.getvOrig()));
             }
 
             if (this.getvDesc() != null){
-                fat.setVOrig(this.getvDesc().toString());
+                fat.setVOrig(BigDecimalUtil.format(this.getvDesc()));
             }
 
             if (this.getvLiq() != null){
-                fat.setVOrig(this.getvLiq().toString());
+                fat.setVOrig(BigDecimalUtil.format(this.getvLiq()));
             }
 
             return fat;

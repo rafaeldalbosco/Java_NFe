@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjetoList;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -84,23 +85,23 @@ public class Cana {
                 this.getDeduc().forEach(deduc -> cana.getDeduc().add(deduc.build()));
             }
             if (this.getvTotDed() != null) {
-                cana.setVTotDed(this.getvTotDed().toString());
+                cana.setVTotDed(BigDecimalUtil.format(this.getvTotDed()));
             }
 
             if (this.getvLiqFor() != null) {
-                cana.setVLiqFor(this.getvLiqFor().toString());
+                cana.setVLiqFor(BigDecimalUtil.format(this.getvLiqFor()));
             }
 
             if (this.getqTotMes() != null) {
-                cana.setQTotMes(this.getqTotMes().toString());
+                cana.setQTotMes(BigDecimalUtil.format(this.getqTotMes()));
             }
 
             if (this.getqTotAnt() != null) {
-                cana.setQTotAnt(this.getqTotAnt().toString());
+                cana.setQTotAnt(BigDecimalUtil.format(this.getqTotAnt()));
             }
 
             if (this.getqTotGer() != null) {
-                cana.setQTotGer(this.getqTotGer().toString());
+                cana.setQTotGer(BigDecimalUtil.format(this.getqTotGer()));
             }
             return cana;
         }

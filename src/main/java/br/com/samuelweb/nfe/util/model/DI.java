@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjetoList;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
@@ -106,7 +107,7 @@ public class DI {
         }
         di.setTpViaTransp(this.getTpViaTransp());
         if (this.getVafrmm() != null) {
-            di.setVAFRMM(this.getVafrmm().toString());
+            di.setVAFRMM(BigDecimalUtil.format(this.getVafrmm()));
         }
         di.setTpIntermedio(this.getTpIntermedio());
         di.setCNPJ(this.getCnpj());

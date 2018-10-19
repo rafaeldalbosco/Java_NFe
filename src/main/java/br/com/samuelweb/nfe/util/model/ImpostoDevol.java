@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -23,11 +24,11 @@ public class ImpostoDevol {
     public TNFe.InfNFe.Det.ImpostoDevol build() {
         TNFe.InfNFe.Det.ImpostoDevol impostoDevol = new TNFe.InfNFe.Det.ImpostoDevol();
         if (this.getpDevol() != null) {
-            impostoDevol.setPDevol(this.getpDevol().toString());
+            impostoDevol.setPDevol(BigDecimalUtil.format(this.getpDevol()));
         }
         if (this.getvIPIDevol() != null) {
             TNFe.InfNFe.Det.ImpostoDevol.IPI ipi = new TNFe.InfNFe.Det.ImpostoDevol.IPI();
-            ipi.setVIPIDevol(this.getvIPIDevol().toString());
+            ipi.setVIPIDevol(BigDecimalUtil.format(this.getvIPIDevol()));
             impostoDevol.setIPI(ipi);
         }
         return impostoDevol;

@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -50,16 +51,16 @@ public class II {
                 || (this.getViof().compareTo(BigDecimal.ZERO) > 0)) {
             TNFe.InfNFe.Det.Imposto.II ii = new TNFe.InfNFe.Det.Imposto.II();
             if (this.getVbc() != null) {
-                ii.setVBC(this.getVbc().toString());
+                ii.setVBC(BigDecimalUtil.format(this.getVbc()));
             }
             if (this.getvDespAdu() != null) {
-                ii.setVDespAdu(this.getvDespAdu().toString());
+                ii.setVDespAdu(BigDecimalUtil.format(this.getvDespAdu()));
             }
             if (this.getVii() != null) {
-                ii.setVII(this.getVii().toString());
+                ii.setVII(BigDecimalUtil.format(this.getVii()));
             }
             if (this.getViof() != null) {
-                ii.setVIOF(this.getViof().toString());
+                ii.setVIOF(BigDecimalUtil.format(this.getViof()));
             }
             return ii;
         }

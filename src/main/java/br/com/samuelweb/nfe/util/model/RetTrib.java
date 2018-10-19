@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -62,25 +63,25 @@ public class RetTrib {
                 (this.getvRetPrev() != null && this.getvRetPrev().compareTo(BigDecimal.ZERO) > 0)) {
 
             if (this.getvRetPIS() != null) {
-                retTrib.setVRetPIS(this.getvRetPIS().toString());
+                retTrib.setVRetPIS(BigDecimalUtil.format(this.getvRetPIS()));
             }
             if (this.getvRetCOFINS() != null) {
-                retTrib.setVRetCOFINS(this.getvRetCOFINS().toString());
+                retTrib.setVRetCOFINS(BigDecimalUtil.format(this.getvRetCOFINS()));
             }
             if (this.getvRetCSLL() != null) {
-                retTrib.setVRetCSLL(this.getvRetCSLL().toString());
+                retTrib.setVRetCSLL(BigDecimalUtil.format(this.getvRetCSLL()));
             }
             if (this.getVbcirrf() != null) {
-                retTrib.setVBCIRRF(this.getVbcirrf().toString());
+                retTrib.setVBCIRRF(BigDecimalUtil.format(this.getVbcirrf()));
             }
             if (this.getVirrf() != null) {
-                retTrib.setVIRRF(this.getVirrf().toString());
+                retTrib.setVIRRF(BigDecimalUtil.format(this.getVirrf()));
             }
             if (this.getVbcRetPrev() != null) {
-                retTrib.setVBCRetPrev(this.getVbcRetPrev().toString());
+                retTrib.setVBCRetPrev(BigDecimalUtil.format(this.getVbcRetPrev()));
             }
             if (this.getvRetPrev() != null) {
-                retTrib.setVRetPrev(this.getvRetPrev().toString());
+                retTrib.setVRetPrev(BigDecimalUtil.format(this.getvRetPrev()));
             }
             return retTrib;
         }

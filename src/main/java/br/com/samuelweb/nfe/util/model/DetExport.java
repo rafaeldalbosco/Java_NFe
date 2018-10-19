@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -44,7 +45,7 @@ public class DetExport {
             exportInd.setNRE(this.getNre());
             exportInd.setChNFe(this.getChNFe());
             if (this.getqExport() != null) {
-                exportInd.setQExport(this.getqExport().toString());
+                exportInd.setQExport(BigDecimalUtil.format(this.getqExport()));
             }
             detExport.setExportInd(exportInd);
         }

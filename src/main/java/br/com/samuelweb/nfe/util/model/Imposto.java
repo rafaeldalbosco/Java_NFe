@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjeto;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -107,7 +108,7 @@ public class Imposto {
         TNFe.InfNFe.Det.Imposto imposto = new TNFe.InfNFe.Det.Imposto();
         if (this.getvTotTrib() != null) {
             imposto.getContent().add(
-                    new JAXBElement<>(new QName("vTotTrib"), String.class, this.getvTotTrib().toString()));
+                    new JAXBElement<>(new QName("vTotTrib"), String.class, BigDecimalUtil.format(this.getvTotTrib())));
         }
         if (this.getIssqn() != null
                 && this.getIssqn().getcListServ() != null

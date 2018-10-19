@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.com.samuelweb.nfe.util.validators.impl.ValidarDrawback;
@@ -45,7 +46,7 @@ public class Adi {
         adi.setNSeqAdic(this.getnSeqAdic());
         adi.setCFabricante(this.getcFabricante());
         if (this.getvDescDI() != null) {
-            adi.setVDescDI(this.getvDescDI().toString());
+            adi.setVDescDI(BigDecimalUtil.format(this.getvDescDI()));
         }
         adi.setNDraw(this.getnDraw());
         return adi;

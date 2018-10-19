@@ -35,43 +35,43 @@ public class ICMS {
             , descricao = NfeConsts.DSC_MODBC)
     private DeterminacaoBaseIcms modBC;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N14", tag = "pRedBC", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = DfeConsts.DSC_PREDBC)
     private BigDecimal pRedBC;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N15", tag = "vBC", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = DfeConsts.DSC_VBC)
     private BigDecimal vBC;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N16", tag = "pICMS", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = DfeConsts.DSC_PICMS)
     private BigDecimal pICMS;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N16a", tag = "vICMSOp", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = DfeConsts.DSC_VICMS)
     private BigDecimal vICMSOp;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N16b", tag = "pDif", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = DfeConsts.DSC_PICMS)
     private BigDecimal pDif;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N16c", tag = "vICMSDif", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = DfeConsts.DSC_VICMS)
     private BigDecimal vICMSDif;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N17", tag = "vICMS", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = DfeConsts.DSC_VICMS)
@@ -101,31 +101,31 @@ public class ICMS {
             , descricao = NfeConsts.DSC_MODBCST)
     private DeterminacaoBaseIcmsST modBCST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N19", tag = "pMVAST", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PMVAST)
     private BigDecimal pMVAST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N20", tag = "pRedBCST", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PMVAST)
     private BigDecimal pRedBCST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N21", tag = "vBCST", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = DfeConsts.DSC_VBCST)
     private BigDecimal vBCST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N22", tag = "pICMSST", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PICMSST)
     private BigDecimal pICMSST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N23", tag = "vICMSST", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_VICMSST)
@@ -155,25 +155,25 @@ public class ICMS {
             , descricao = NfeConsts.DSC_UFST)
     private String UFST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N25", tag = "pBCOp", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PBCOP)
     private BigDecimal pBCOp;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N26", tag = "vBCSTRet", decimais = 2, precisao = 13
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_VBCSTRET)
     private BigDecimal vBCSTRet;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N26a", tag = "pST", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PST)
     private BigDecimal pST;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N27", tag = "vICMSSTRet", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_PBCOP)
@@ -209,25 +209,25 @@ public class ICMS {
             , descricao = NfeConsts.DSC_VICMSDESON)
     private BigDecimal vICMSDeson;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N29", tag = "pCredSN", decimais = 4, precisao = 7
             , tamanhoMinimo = 1, tamanhoMaximo = 7, ocorrencias = 0
             , descricao = NfeConsts.DSC_PCREDSN)
     private BigDecimal pCredSN;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N30", tag = "vCredICMSSN", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_VCREDICMSSN)
     private BigDecimal vCredICMSSN;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N31", tag = "vBCSTDest", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_VBCICMSSTDEST)
     private BigDecimal vBCSTDest;
 
-    @NfeCampo(tipo = BigDecimal.class
+    @NfeCampo(tipo = BigDecimal.class, valorDefault = "0"
             , id = "N32", tag = "vICMSSTDest", decimais = 2, precisao = 15
             , tamanhoMinimo = 1, tamanhoMaximo = 15, ocorrencias = 0
             , descricao = NfeConsts.DSC_VBCICMSSTDEST)

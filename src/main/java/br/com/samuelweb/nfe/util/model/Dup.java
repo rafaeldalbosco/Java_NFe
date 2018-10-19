@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -37,7 +38,7 @@ public class Dup {
         }
 
         if (this.getvDup() != null){
-            dup.setVDup(this.getvDup().toString());
+            dup.setVDup(BigDecimalUtil.format(this.getvDup()));
         }
 
         return dup;

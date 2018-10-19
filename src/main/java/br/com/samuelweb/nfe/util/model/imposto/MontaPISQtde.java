@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.PIS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -11,13 +12,13 @@ public class MontaPISQtde implements MontaImposto<TNFe.InfNFe.Det.Imposto.PIS, P
             pisQtde.setCST(pis.getCST().getValue());
         }
         if (pis.getqBCProd() != null) {
-            pisQtde.setQBCProd(pis.getqBCProd().toString());
+            pisQtde.setQBCProd(BigDecimalUtil.format(pis.getqBCProd()));
         }
         if (pis.getvAliqProd() != null) {
-            pisQtde.setVAliqProd(pis.getvAliqProd().toString());
+            pisQtde.setVAliqProd(BigDecimalUtil.format(pis.getvAliqProd()));
         }
         if (pis.getvPIS() != null) {
-            pisQtde.setVPIS(pis.getvPIS().toString());
+            pisQtde.setVPIS(BigDecimalUtil.format(pis.getvPIS()));
         }
         imposto.setPISQtde(pisQtde);
     }

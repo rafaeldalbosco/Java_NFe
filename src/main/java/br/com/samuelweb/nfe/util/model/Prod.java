@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.annotation.NfeObjeto;
 import br.com.samuelweb.nfe.util.annotation.NfeObjetoList;
@@ -233,33 +234,33 @@ public class Prod {
         prod.setCFOP(this.getCfop());
         prod.setUCom(this.getuCom());
         if (this.getqCom() != null) {
-            prod.setQCom(this.getqCom().toString());
+            prod.setQCom(BigDecimalUtil.format(this.getqCom()));
         }
         if (this.getvUnCom() != null) {
-            prod.setVUnCom(this.getvUnCom().toString());
+            prod.setVUnCom(BigDecimalUtil.format(this.getvUnCom()));
         }
         if (this.getvProd() != null) {
-            prod.setVProd(this.getvProd().toString());
+            prod.setVProd(BigDecimalUtil.format(this.getvProd()));
         }
         prod.setCEANTrib(this.getCeanTrib());
         prod.setUTrib(this.getuTrib());
         if (this.getqTrib() != null) {
-            prod.setQTrib(this.getqTrib().toString());
+            prod.setQTrib(BigDecimalUtil.format(this.getqTrib()));
         }
         if (this.getvUnTrib() != null) {
-            prod.setVUnTrib(this.getvUnTrib().toString());
+            prod.setVUnTrib(BigDecimalUtil.format(this.getvUnTrib()));
         }
         if (this.getvFrete() != null) {
-            prod.setVFrete(this.getvFrete().toString());
+            prod.setVFrete(BigDecimalUtil.format(this.getvFrete()));
         }
         if (this.getvSeg() != null) {
-            prod.setVSeg(this.getvSeg().toString());
+            prod.setVSeg(BigDecimalUtil.format(this.getvSeg()));
         }
         if (this.getvDesc() != null) {
-            prod.setVDesc(this.getvDesc().toString());
+            prod.setVDesc(BigDecimalUtil.format(this.getvDesc()));
         }
         if (this.getvOutro() != null) {
-            prod.setVOutro(this.getvOutro().toString());
+            prod.setVOutro(BigDecimalUtil.format(this.getvOutro()));
         }
         if (this.getIndTot() != null) {
             prod.setIndTot(this.getIndTot().toString());

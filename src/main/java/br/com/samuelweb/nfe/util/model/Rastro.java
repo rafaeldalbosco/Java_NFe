@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -44,7 +45,7 @@ public class Rastro {
         TNFe.InfNFe.Det.Prod.Rastro rastro = new TNFe.InfNFe.Det.Prod.Rastro();
         rastro.setNLote(this.getnLote());
         if (this.getqLote() != null) {
-            rastro.setQLote(this.getqLote().toString());
+            rastro.setQLote(BigDecimalUtil.format(this.getqLote()));
         }
         if (this.getdFab() != null) {
             rastro.setDFab(this.getdFab().format(DateTimeFormatter.ISO_DATE));

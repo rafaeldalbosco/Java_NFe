@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.ICMS;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
 
@@ -15,10 +16,10 @@ public class MontaICMSCsosn101 implements MontaImposto<TNFe.InfNFe.Det.Imposto.I
             icmsSn101.setCSOSN(icms.getCSOSN().getValue());
         }
         if (icms.getpCredSN() != null) {
-            icmsSn101.setPCredSN(icms.getpCredSN().toString());
+            icmsSn101.setPCredSN(BigDecimalUtil.format(icms.getpCredSN()));
         }
         if (icms.getvCredICMSSN() != null) {
-            icmsSn101.setVCredICMSSN(icms.getvCredICMSSN().toString());
+            icmsSn101.setVCredICMSSN(BigDecimalUtil.format(icms.getvCredICMSSN()));
         }
         imposto.setICMSSN101(icmsSn101);
     }

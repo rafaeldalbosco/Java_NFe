@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -24,7 +25,7 @@ public class Med {
         TNFe.InfNFe.Det.Prod.Med med = new TNFe.InfNFe.Det.Prod.Med();
         med.setCProdANVISA(this.getcProdANVISA());
         if (this.getVpmc()!= null) {
-            med.setVPMC(this.getVpmc().toString());
+            med.setVPMC(BigDecimalUtil.format(this.getVpmc()));
         }
         return med;
     }

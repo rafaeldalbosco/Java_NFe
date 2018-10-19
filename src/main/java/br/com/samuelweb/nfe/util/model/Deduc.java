@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -25,7 +26,7 @@ public class Deduc {
         deduc.setXDed(this.getxDed());
 
         if (this.getvDed() != null){
-            deduc.setVDed(this.getvDed().toString());
+            deduc.setVDed(BigDecimalUtil.format(this.getvDed()));
         }
 
         return deduc;

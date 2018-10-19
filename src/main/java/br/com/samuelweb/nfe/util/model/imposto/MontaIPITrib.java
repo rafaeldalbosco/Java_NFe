@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model.imposto;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.model.IPI;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TIpi;
 
@@ -13,22 +14,22 @@ public class MontaIPITrib implements MontaImposto<TIpi, IPI> {
             ipiTrib.setCST(ipi.getCst().getValue());
         }
         if (ipi.getvBC() != null) {
-            ipiTrib.setVBC(ipi.getvBC().toString());
+            ipiTrib.setVBC(BigDecimalUtil.format(ipi.getvBC()));
         }
         if (ipi.getqUnid() != null && ipi.getvUnid() != null
                 && ipi.getqUnid().add(ipi.getvUnid()).compareTo(BigDecimal.ZERO) > 0) {
-            ipiTrib.setQUnid(ipi.getqUnid().toString());
-            ipiTrib.setVUnid(ipi.getvUnid().toString());
+            ipiTrib.setQUnid(BigDecimalUtil.format(ipi.getqUnid()));
+            ipiTrib.setVUnid(BigDecimalUtil.format(ipi.getvUnid()));
         } else {
             if (ipi.getvBC() != null) {
-                ipiTrib.setVBC(ipi.getvBC().toString());
+                ipiTrib.setVBC(BigDecimalUtil.format(ipi.getvBC()));
             }
             if (ipi.getpIPI() != null) {
-                ipiTrib.setPIPI(ipi.getpIPI().toString());
+                ipiTrib.setPIPI(BigDecimalUtil.format(ipi.getpIPI()));
             }
         }
         if (ipi.getvIPI() != null) {
-            ipiTrib.setVIPI(ipi.getvIPI().toString());
+            ipiTrib.setVIPI(BigDecimalUtil.format(ipi.getvIPI()));
         }
         imposto.setIPITrib(ipiTrib);
     }

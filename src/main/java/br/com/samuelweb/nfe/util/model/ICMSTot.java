@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -150,73 +151,73 @@ public class ICMSTot {
         TNFe.InfNFe.Total.ICMSTot icmsTot = new TNFe.InfNFe.Total.ICMSTot();
 
         if (this.getVbc() != null) {
-            icmsTot.setVBC(this.getVbc().toString());
+            icmsTot.setVBC(BigDecimalUtil.format(this.getVbc()));
         }
         if (this.getVicms() != null) {
-            icmsTot.setVICMS(this.getVicms().toString());
+            icmsTot.setVICMS(BigDecimalUtil.format(this.getVicms()));
         }
         if (this.getVicmsDeson() != null) {
-            icmsTot.setVICMSDeson(this.getVicmsDeson().toString());
+            icmsTot.setVICMSDeson(BigDecimalUtil.format(this.getVicmsDeson()));
         }
         if (this.getVfcpufDest() != null) {
-            icmsTot.setVFCPUFDest(this.getVfcpufDest().toString());
+            icmsTot.setVFCPUFDest(BigDecimalUtil.format(this.getVfcpufDest()));
         }
         if (this.getVicmsufDest() != null) {
-            icmsTot.setVICMSUFDest(this.getVicmsufDest().toString());
+            icmsTot.setVICMSUFDest(BigDecimalUtil.format(this.getVicmsufDest()));
         }
         if (this.getVicmsufRemet() != null) {
-            icmsTot.setVICMSUFRemet(this.getVicmsufRemet().toString());
+            icmsTot.setVICMSUFRemet(BigDecimalUtil.format(this.getVicmsufRemet()));
         }
         if (this.getVfcp() != null) {
-            icmsTot.setVFCP(this.getVfcp().toString());
+            icmsTot.setVFCP(BigDecimalUtil.format(this.getVfcp()));
         }
         if (this.getVbcst() != null) {
-            icmsTot.setVBCST(this.getVbcst().toString());
+            icmsTot.setVBCST(BigDecimalUtil.format(this.getVbcst()));
         }
         if (this.getVst() != null) {
-            icmsTot.setVST(this.getVst().toString());
+            icmsTot.setVST(BigDecimalUtil.format(this.getVst()));
         }
         if (this.getVfcpst() != null) {
-            icmsTot.setVFCPST(this.getVfcpst().toString());
+            icmsTot.setVFCPST(BigDecimalUtil.format(this.getVfcpst()));
         }
         if (this.getVfcpstRet() != null) {
-            icmsTot.setVFCPSTRet(this.getVfcpstRet().toString());
+            icmsTot.setVFCPSTRet(BigDecimalUtil.format(this.getVfcpstRet()));
         }
         if (this.getvProd() != null) {
-            icmsTot.setVProd(this.getvProd().toString());
+            icmsTot.setVProd(BigDecimalUtil.format(this.getvProd()));
         }
         if (this.getvFrete() != null) {
-            icmsTot.setVFrete(this.getvFrete().toString());
+            icmsTot.setVFrete(BigDecimalUtil.format(this.getvFrete()));
         }
         if (this.getvSeg() != null) {
-            icmsTot.setVSeg(this.getvSeg().toString());
+            icmsTot.setVSeg(BigDecimalUtil.format(this.getvSeg()));
         }
         if (this.getvDesc() != null) {
-            icmsTot.setVDesc(this.getvDesc().toString());
+            icmsTot.setVDesc(BigDecimalUtil.format(this.getvDesc()));
         }
         if (this.getVii() != null) {
-            icmsTot.setVII(this.getVii().toString());
+            icmsTot.setVII(BigDecimalUtil.format(this.getVii()));
         }
         if (this.getVipi() != null) {
-            icmsTot.setVIPI(this.getVipi().toString());
+            icmsTot.setVIPI(BigDecimalUtil.format(this.getVipi()));
         }
         if (this.getVipiDevol() != null) {
-            icmsTot.setVIPIDevol(this.getVipiDevol().toString());
+            icmsTot.setVIPIDevol(BigDecimalUtil.format(this.getVipiDevol()));
         }
         if (this.getVpis() != null) {
-            icmsTot.setVPIS(this.getVpis().toString());
+            icmsTot.setVPIS(BigDecimalUtil.format(this.getVpis()));
         }
         if (this.getVcofins() != null) {
-            icmsTot.setVCOFINS(this.getVcofins().toString());
+            icmsTot.setVCOFINS(BigDecimalUtil.format(this.getVcofins()));
         }
         if (this.getvOutro() != null) {
-            icmsTot.setVOutro(this.getvOutro().toString());
+            icmsTot.setVOutro(BigDecimalUtil.format(this.getvOutro()));
         }
         if (this.getVnf() != null) {
-            icmsTot.setVNF(this.getVnf().toString());
+            icmsTot.setVNF(BigDecimalUtil.format(this.getVnf()));
         }
         if (this.getvTotTrib() != null) {
-            icmsTot.setVTotTrib(this.getvTotTrib().toString());
+            icmsTot.setVTotTrib(BigDecimalUtil.format(this.getvTotTrib()));
         }
 
         return icmsTot;

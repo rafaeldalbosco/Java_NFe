@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.com.samuelweb.nfe.util.enumeration.IndISS;
@@ -132,13 +133,13 @@ public class ISSQN  {
     public TNFe.InfNFe.Det.Imposto.ISSQN build() {
         TNFe.InfNFe.Det.Imposto.ISSQN issqn = new TNFe.InfNFe.Det.Imposto.ISSQN();
         if (this.getvBC() != null) {
-            issqn.setVBC(this.getvBC().toString());
+            issqn.setVBC(BigDecimalUtil.format(this.getvBC()));
         }
         if (this.getvAliq() != null) {
-            issqn.setVAliq(this.getvAliq().toString());
+            issqn.setVAliq(BigDecimalUtil.format(this.getvAliq()));
         }
         if (this.getvISSQN() != null) {
-            issqn.setVISSQN(this.getvISSQN().toString());
+            issqn.setVISSQN(BigDecimalUtil.format(this.getvISSQN()));
         }
         if (this.getcMunFG() != null) {
             issqn.setCMunFG(this.getcMunFG().toString());
@@ -147,19 +148,19 @@ public class ISSQN  {
             issqn.setCListServ(this.getcListServ().toString());
         }
         if (this.getvDeducao()!= null) {
-            issqn.setVDeducao(this.getvDeducao().toString());
+            issqn.setVDeducao(BigDecimalUtil.format(this.getvDeducao()));
         }
         if (this.getvOutro() != null) {
-            issqn.setVOutro(this.getvOutro().toString());
+            issqn.setVOutro(BigDecimalUtil.format(this.getvOutro()));
         }
         if (this.getvDescIncond() != null) {
-            issqn.setVDescIncond(this.getvDescIncond().toString());
+            issqn.setVDescIncond(BigDecimalUtil.format(this.getvDescIncond()));
         }
         if (this.getvDescCond() != null) {
-            issqn.setVDescCond(this.getvDescCond().toString());
+            issqn.setVDescCond(BigDecimalUtil.format(this.getvDescCond()));
         }
         if (this.getvISSRet() != null) {
-            issqn.setVISSRet(this.getvISSRet().toString());
+            issqn.setVISSRet(BigDecimalUtil.format(this.getvISSRet()));
         }
         if (this.getIndISS() != null) {
             issqn.setIndISS(this.getIndISS().getValue().toString());

@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.DfeConsts;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
@@ -95,7 +96,7 @@ public class Avulsa {
             avulsa.setDEmi(this.getdEmi().format(DateTimeFormatter.ISO_DATE));
         }
         if (this.getvDar() != null) {
-            avulsa.setVDAR(this.getvDar().toString() );
+            avulsa.setVDAR(BigDecimalUtil.format(this.getvDar()) );
         }
         avulsa.setRepEmi(this.getRepEmi());
         if (this.getdPag() != null ) {

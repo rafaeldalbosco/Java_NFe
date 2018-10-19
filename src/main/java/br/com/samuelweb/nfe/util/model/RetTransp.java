@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.inf.portalfiscal.nfe.schema_4.enviNFe.TNFe;
@@ -46,19 +47,19 @@ public class RetTransp {
         TNFe.InfNFe.Transp.RetTransp repTransp = new TNFe.InfNFe.Transp.RetTransp();
 
         if (this.getvServ() != null){
-            repTransp.setVServ(this.getvServ().toString());
+            repTransp.setVServ(BigDecimalUtil.format(this.getvServ()));
         }
 
         if (this.getVbcRet()!= null){
-            repTransp.setVBCRet(this.getVbcRet().toString());
+            repTransp.setVBCRet(BigDecimalUtil.format(this.getVbcRet()));
         }
 
         if (this.getPicmsRet() != null){
-            repTransp.setPICMSRet(this.getPicmsRet().toString());
+            repTransp.setPICMSRet(BigDecimalUtil.format(this.getPicmsRet()));
         }
 
         if (this.getVicmsRet() != null) {
-            repTransp.setVICMSRet(this.getVicmsRet().toString());
+            repTransp.setVICMSRet(BigDecimalUtil.format(this.getVicmsRet()));
         }
 
         repTransp.setCFOP(this.getCfop());

@@ -1,5 +1,6 @@
 package br.com.samuelweb.nfe.util.model;
 
+import br.com.samuelweb.nfe.util.BigDecimalUtil;
 import br.com.samuelweb.nfe.util.annotation.NfeCampo;
 import br.com.samuelweb.nfe.util.consts.NfeConsts;
 import br.com.samuelweb.nfe.util.enumeration.RegimeTributario;
@@ -91,34 +92,34 @@ public class ISSQNtot {
             TNFe.InfNFe.Total.ISSQNtot issqNtot = new TNFe.InfNFe.Total.ISSQNtot();
 
             if (this.getvServ() != null) {
-                issqNtot.setVServ(this.getvServ().toString());
+                issqNtot.setVServ(BigDecimalUtil.format(this.getvServ()));
             }
             if (this.getVbc() != null) {
-                issqNtot.setVBC(this.getVbc().toString());
+                issqNtot.setVBC(BigDecimalUtil.format(this.getVbc()));
             }
             if (this.getViss() != null) {
-                issqNtot.setVISS(this.getViss().toString());
+                issqNtot.setVISS(BigDecimalUtil.format(this.getViss()));
             }
             if (this.getVpis() != null) {
-                issqNtot.setVPIS(this.getVpis().toString());
+                issqNtot.setVPIS(BigDecimalUtil.format(this.getVpis()));
             }
             if (this.getVcofins() != null) {
-                issqNtot.setVCOFINS(this.getVcofins().toString());
+                issqNtot.setVCOFINS(BigDecimalUtil.format(this.getVcofins()));
             }
             if (this.getvDeducao() != null) {
-                issqNtot.setVDeducao(this.getvDeducao().toString());
+                issqNtot.setVDeducao(BigDecimalUtil.format(this.getvDeducao()));
             }
             if (this.getvOutro() != null) {
-                issqNtot.setVOutro(this.getvOutro().toString());
+                issqNtot.setVOutro(BigDecimalUtil.format(this.getvOutro()));
             }
             if (this.getvDescIncond() != null) {
-                issqNtot.setVDescIncond(this.getvDescIncond().toString());
+                issqNtot.setVDescIncond(BigDecimalUtil.format(this.getvDescIncond()));
             }
             if (this.getvDescCond() != null) {
-                issqNtot.setVDescCond(this.getvDescCond().toString());
+                issqNtot.setVDescCond(BigDecimalUtil.format(this.getvDescCond()));
             }
             if (this.getVissRet() != null) {
-                issqNtot.setVISSRet(this.getVissRet().toString());
+                issqNtot.setVISSRet(BigDecimalUtil.format(this.getVissRet()));
             }
             if (this.getdCompet() != null) {
                 issqNtot.setDCompet(this.getdCompet().format(DateTimeFormatter.ISO_DATE));
