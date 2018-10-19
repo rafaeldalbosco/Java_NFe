@@ -4,7 +4,7 @@ Projeto Para implementação do Java-Nfe Utilizando JAXB.
 ## Gostou do Projeto? Dê sua colaboração: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TX9K693QQYA6W)
 
 Para Iniciar : 
-- Baixe o java-nfe-4.00.8a.jar (https://github.com/Samuel-Oliveira/Java_NFe/raw/master/java-nfe-4.00.8a.jar) e o adicione às bibliotecas de Seu Projeto.
+- Baixe o java-nfe-4.00.9c.jar (https://github.com/Samuel-Oliveira/Java_NFe/raw/master/java-nfe-4.00.9c.jar) e o adicione às bibliotecas de Seu Projeto.
 - Baixe o Schemas.rar (https://github.com/Samuel-Oliveira/Java_NFe/raw/master/Schemas.rar) e extraia na sua Máquina.
 
 - Maven :
@@ -17,7 +17,7 @@ Para Iniciar :
 		<dependency>
 			<groupId>br.com.samuelweb</groupId>
 			<artifactId>java-nfe</artifactId>
-			<version>4.00.8a</version>
+			<version>4.00.9c</version>
 		</dependency>
 ```
 
@@ -27,8 +27,19 @@ ________________________________________________________________________________
 
 # Historico de Versões
 
-## v4.00.8 - 
-
+## v4.00.9 - 
+ - Corrigido URLs PE
+ - Adicionado metodo Que remove Acentos Automaticamente.
+ - Corrigido conversão de BigDecimal para String dos Models (utils) passa a usar DecimalFormat.
+ 
+## v4.00.8 - 11/10/2018
+ - Adicionado Melhorias
+ - Corrigo erros acentos
+ - Corrigido Urls MT NFe Homologação
+ - Corrigido Urls PE NFCe Homologação/Produção
+ - Corrigido Erro Pontuação na Validação
+ - Adicionado URLs MG Nfce
+ - Atualizado Cacert
 
 ## v4.00.7 - 03/09/2018 
 - Alterado URL MS

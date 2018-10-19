@@ -82,7 +82,7 @@ public class XmlUtil {
         JAXBContext context = JAXBContext.newInstance(classe);
         Unmarshaller unmarshaller = context.createUnmarshaller();
 
-        return unmarshaller.unmarshal(new StreamSource(new StringReader(xml)), classe).getValue();
+        return unmarshaller.unmarshal(new StreamSource(new StringReader(removeAcentos(xml))), classe).getValue();
     }
 
     /**
@@ -227,12 +227,7 @@ public class XmlUtil {
 
         StringWriter sw = new StringWriter();
 
-        if (obj.getClass().getSimpleName().equals(ENVIO_NFE) || obj.getClass().getSimpleName().equals(NFEPROC)) {
-            CDATAContentHandler cdataHandler = new CDATAContentHandler(sw, "utf-8");
-            marshaller.marshal(element, cdataHandler);
-        } else {
-            marshaller.marshal(element, sw);
-        }
+        marshaller.marshal(element, sw);
         StringBuilder xml = new StringBuilder();
         xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>").append(sw.toString());
 
